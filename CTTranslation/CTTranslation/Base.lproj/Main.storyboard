@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="DqN-67-uFC">
+                                <rect key="frame" x="97.5" y="257.5" width="180" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="Nyf-45-LiO"/>
+                                    <constraint firstAttribute="width" constant="180" id="dmB-DX-AxZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-CQ-n7S">
+                                <rect key="frame" x="130" y="429.5" width="120" height="30"/>
+                                <state key="normal" title="To next controller"/>
+                                <connections>
+                                    <action selector="onNextVc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9V-fd-STz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DqN-67-uFC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HX8-kD-7C9"/>
+                            <constraint firstItem="Rdf-CQ-n7S" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="2.5" id="P5g-as-jZF"/>
+                            <constraint firstItem="Rdf-CQ-n7S" firstAttribute="top" secondItem="DqN-67-uFC" secondAttribute="bottom" id="YEr-no-zBC"/>
+                            <constraint firstItem="DqN-67-uFC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hiG-8o-8q6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="roseImageView" destination="DqN-67-uFC" id="U4G-G4-pmp"/>
+                        <segue destination="XUN-4B-Bl7" kind="presentation" identifier="showDetails" id="Yfa-tg-dgy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="4JG-py-qHk">
+            <objects>
+                <viewController id="XUN-4B-Bl7" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ri-1b-bsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="X0o-QC-vt5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCv-td-HBn">
+                                <rect key="frame" x="311" y="50" width="48" height="22"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="onDismiss:" destination="XUN-4B-Bl7" eventType="touchUpInside" id="9lW-0D-qoe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28T-NK-mEM">
+                                <rect key="frame" x="105" y="540" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Second controller"/>
+                                <connections>
+                                    <action selector="onNextVc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rH9-Yg-C07"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P7U-7b-05v" firstAttribute="trailing" secondItem="zCv-td-HBn" secondAttribute="trailing" constant="16" id="ONf-Tb-u0M"/>
+                            <constraint firstItem="zCv-td-HBn" firstAttribute="top" secondItem="P7U-7b-05v" secondAttribute="top" constant="30" id="n3V-oX-zF3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P7U-7b-05v"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4d7-HJ-NYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rose" width="500" height="500"/>
+    </resources>
+</document>
